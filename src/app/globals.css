@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1c95be;
+  --swiper-pagination-color: var(--primary);
+  --swiper-pagination-bullet-inactive-color: #f0f0f0;
+}
+
+*,
+html {
+}
+
+body {
+  @apply bg-gray-100;
+}
+
+@layer components {
+  button:active {
+    @apply transform scale-95;
+  }
+
+  button:focus {
+    @apply outline-none;
+  }
+
+  button {
+    @apply transition-transform duration-200 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .content {
+    @apply max-w-[1352px] mx-auto small:px-2;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .absolute-full {
+    @apply w-full h-full absolute top-0 left-0;
+  }
+
+  .fixed-full {
+    @apply w-full h-full fixed top-0 left-0;
+  }
+
+  .overflow-children div {
+    @apply overflow-hidden;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .unselectable {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .undraggable {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+
+  .vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+li::marker {
+  color: var(--primary);
+}
+
+.services-swiper .swiper-slide.swiper-slide-prev:first-child,
+.services-swiper .swiper-slide.swiper-slide-prev:nth-child(2) {
+  @apply blur-sm opacity-50 !important;
+}
+
+.services-swiper
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background-color: #727272 !important;
+}
+
+.services-swiper .swiper-pagination-horizontal {
+  bottom: 0rem !important;
+}
+
+.swiper-pagination-bullet {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1.5rem !important;
+  border-radius: 0.5rem !important;
+}
+
+.clients-swiper > .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* {radial-gradient bg-gradient-to-br from-primary to-transparent} */
+.hover-gradient {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.hover-gradient:hover {
+  background: radial-gradient(
+    circle farthest-side at top left,
+    rgba(254, 206, 12, 0.3),
+    transparent
+  );
+}
+
+/* small viewport */
+
+.text-sm {
+  @apply small:text-[10px];
+}
+
+.text-base {
+  @apply small:text-xs;
+}
+
+.text-lg {
+  @apply small:text-sm;
+}
+
+.text-xl {
+  @apply small:text-base;
+}
+
+.text-2xl {
+  @apply small:text-lg;
+}
+
+.text-3xl {
+  @apply small:text-xl;
+}
+
+.text-4xl {
+  @apply small:text-2xl;
+}
+
+.text-5xl {
+  @apply small:text-3xl;
+}
+
+.text-6xl {
+  @apply small:text-4xl;
+}
+
+.leading-7 {
+  @apply small:leading-6;
+}
