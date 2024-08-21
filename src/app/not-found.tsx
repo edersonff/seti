@@ -10,7 +10,6 @@ export default function NotFound() {
             Página não encontrada
           </h1>
           <p>
-            {/* pagina não encontrada pois só foi feito homepage para a empresa, como um exemplo do que eu Ederson Franzen Fagundes, posso fazer, e vou pedir para a empresa me contatar para terminar o serviço se ela gostou do site */}
             Este é um protótipo de home-page para a{" "}
             <span className="bg-primary px-2 py-0.5 text-white font-bold">
               Seti
